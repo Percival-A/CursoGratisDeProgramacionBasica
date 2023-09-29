@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Piedra, papel o tijera</title>
+        <script>
+            // 1. Preguntar el nombre
+            let nombre = ''
+            nombre = prompt('¿Cual es tu nombre?')
+            alert(`Hola ${nombre} bienvenido al juego de piedra, papel o tijera`)
+            // 2. Preguntar opcion
+            opcion_elejida = prompt(`${nombre} ¿Que opcion eliges? 1. Piedra, 2. Papel, 3. Tijera, ingresa el numero de la opcion que eliges`)
+            // 3. Condiciones y mensajes
+            if (opcion_elejida == 1) {
+                alert(`${nombre} elegiste piedra`)
+            } else if (opcion_elejida == 2) {
+                alert(`${nombre} elegiste papel`)
+            } else if (opcion_elejida == 3) {
+                alert(`${nombre} elegiste tijera`)
+            } else {
+                alert(`${nombre} no elegiste ninguna opcion valida`)
+            }
+        </script>
+        <body>
+            <h1>Piedra, papel o tijera</h1>
+            <p>Este es un juego de piedra, papel o tijera</p>
+            <p>¡Esto es divertido! 😃🎉</p>
+        </body>
+    </head>
+</html>
