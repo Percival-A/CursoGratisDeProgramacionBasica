@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Piedra, papel o tijera</title>
+        <title>Piedra, papel o tijera ✂</title>
         <script>
             // 1. Preguntar el nombre
             let nombre = ''
             nombre = prompt('¿Cual es tu nombre?')
-            alert(`Hola ${nombre} bienvenido al juego de piedra, papel o tijera`)
+            alert(`Hola ${nombre} Bienvenido al juego de piedra 🪨 papel 📄 o tijera ✂`)
             // 2. Preguntar opcion
-            opcion_elejida = prompt(`${nombre} ¿Que opcion eliges? 1. Piedra, 2. Papel, 3. Tijera, ingresa el numero de la opcion que eliges`)
-            // 3. Condiciones y mensajes
+            opcion_elejida = prompt(`${nombre} ¿Que opcion eliges?\n 1. Piedra 🪨\n 2. Papel 📄\n 3. Tijera ✂\n Ingresa el numero de la opcion que eliges:`)
+            // 3. Mostrar opcion elegida
             if (opcion_elejida == 1) {
-                alert(`${nombre} elegiste piedra`)
+                alert(`${nombre} elegiste piedra 🪨`)
             } else if (opcion_elejida == 2) {
-                alert(`${nombre} elegiste papel`)
+                alert(`${nombre} elegiste papel 📄`)
             } else if (opcion_elejida == 3) {
-                alert(`${nombre} elegiste tijera`)
+                alert(`${nombre} elegiste tijera ✂`)
             } else {
-                alert(`${nombre} no elegiste una opcion valida`)
+                alert(`${nombre} no elegiste una opcion valida ❌`)
+            }
+            // 4. Generar opcion aleatoria
+            let opcion_aleatoria = Math.floor(Math.random() * 3) + 1
+            // 5. Mostrar opcion aleatoria
+            if (opcion_aleatoria == 1) {
+                alert(`La computadora eligio piedra 🪨`)
+            } else if (opcion_aleatoria == 2) {
+                alert(`La computadora eligio papel 📄`)
+            } else if (opcion_aleatoria == 3) {
+                alert(`La computadora eligio tijera ✂`)
+            }
+            // 6. Mostrar resultado
+            if (opcion_elejida == opcion_aleatoria) {
+                alert(`Empate 🤝`)
+            } else if (opcion_elejida == 1 && opcion_aleatoria == 3) {
+                alert(`${nombre} ganaste 🥳`)
+            } else if (opcion_elejida == 2 && opcion_aleatoria == 1) {
+                alert(`${nombre} ganaste 🥳`)
+            } else if (opcion_elejida == 3 && opcion_aleatoria == 2) {
+                alert(`${nombre} ganaste 🥳`)
+            } else {
+                alert(`${nombre} perdiste 😢`)
             }
         </script>
         <body>
-            <h1>Piedra, papel o tijera</h1>
+            <h1>Piedra 🪨 papel 📄 o tijera ✂</h1>
             <p>Este es un juego de piedra, papel o tijera</p>
             <p>¡Esto es divertido! 😃🎉</p>
         </body>
