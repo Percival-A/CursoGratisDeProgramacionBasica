@@ -55,20 +55,31 @@
             nombre = prompt('¿Cual es tu nombre?')
             alert(`Hola ${nombre} Bienvenido al juego de piedra 🪨 papel 📄 o tijera ✂`)
 
-            // 2. Preguntar opcion
-            opcion_elejida = prompt(`${nombre} ¿Que opcion eliges?\n 1. Piedra 🪨\n 2. Papel 📄\n 3. Tijera ✂\n Ingresa el numero de la opcion que eliges:`)
+            // 1.5 Repetir el juego hasta que alguien gane 3 veces
+            alert(`Gana 3 veces para ganar el juego`)
+            while (vecesGanaste < 3 && vecesPerdiste < 3){
+                // 2. Preguntar opcion
+                opcion_elejida = prompt(`${nombre} ¿Que opcion eliges?\n 1. Piedra 🪨\n 2. Papel 📄\n 3. Tijera ✂\n Ingresa el numero de la opcion que eliges:`)
 
-            // 3. Mostrar opcion elegida
-            mostrar(opcion_elejida, nombre)
+                // 3. Mostrar opcion elegida
+                mostrar(opcion_elejida, nombre)
 
-            // 4. Generar opcion aleatoria
-            opcion_aleatoria = aleatorio(1, 3)
+                // 4. Generar opcion aleatoria
+                opcion_aleatoria = aleatorio(1, 3)
 
-            // 5. Mostrar opcion aleatoria
-            mostrar(opcion_aleatoria, 'Computadora')
+                // 5. Mostrar opcion aleatoria
+                mostrar(opcion_aleatoria, 'Computadora')
 
-            // 6. Mostrar resultado
-            resultado()
+                // 6. Mostrar resultado
+                resultado()
+            }//repite el juego hasta que alguien gane 3 veces
+
+            // 7. Mostrar el ganador
+            if (vecesGanaste == 3) {
+                alert(`${nombre} ganaste el juego 🥳 ${vecesGanaste} a ${vecesPerdiste}`)
+            } else {
+                alert(`${nombre} perdiste el juego 😢 ${vecesPerdiste} a ${vecesGanaste}`)
+            }//muestra el ganador del juego
         </script>
         <body>
             <h1>Piedra 🪨 papel 📄 o tijera ✂</h1>
