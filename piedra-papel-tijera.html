@@ -10,6 +10,7 @@
             let opcion_aleatoria = 0
             let vecesGanaste = 0
             let vecesPerdiste = 0
+            let partidas = 3
             
             //funciones
             function aleatorio(min, max) {
@@ -55,9 +56,9 @@
             nombre = prompt('¿Cual es tu nombre?')
             alert(`Hola ${nombre} Bienvenido al juego de piedra 🪨 papel 📄 o tijera ✂`)
 
-            // 1.5 Repetir el juego hasta que alguien gane 3 veces
-            alert(`Gana 3 veces para ganar el juego`)
-            while (vecesGanaste < 3 && vecesPerdiste < 3){
+            // 1.5 Repetir el juego hasta que alguien gane <partidas> veces
+            alert(`Gana ${partidas} veces para ganar el juego`)
+            while (vecesGanaste < partidas && vecesPerdiste < partidas){
                 // 2. Preguntar opcion
                 opcion_elejida = prompt(`${nombre} ¿Que opcion eliges?\n 1. Piedra 🪨\n 2. Papel 📄\n 3. Tijera ✂\n Ingresa el numero de la opcion que eliges:`)
 
@@ -72,10 +73,10 @@
 
                 // 6. Mostrar resultado
                 resultado()
-            }//repite el juego hasta que alguien gane 3 veces
+            }//repite el juego hasta que alguien gane <patidas> veces
 
             // 7. Mostrar el ganador
-            if (vecesGanaste == 3) {
+            if (vecesGanaste == partidas) {
                 alert(`${nombre} ganaste el juego 🥳 ${vecesGanaste} a ${vecesPerdiste}`)
             } else {
                 alert(`${nombre} perdiste el juego 😢 ${vecesPerdiste} a ${vecesGanaste}`)
