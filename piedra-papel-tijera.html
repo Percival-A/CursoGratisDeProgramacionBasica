@@ -4,9 +4,10 @@
         <title>Piedra, papel o tijera ✂</title>
         <script>
             // 0. funciones y variables
+            //funciones
             function aleatorio(min, max) {
-                return Math.floor(Math.random() * (max - min + 1)) + min // genera un numero aleatorio entre min y max. Genera un numero random, que se multiplica por el rango de numeros que queremos, y se le suma el minimo. Math.floor redondea el numero hacia abajo.
-            }
+                return Math.floor(Math.random() * (max - min + 1)) + min 
+            }// genera un numero aleatorio entre min y max. Genera un numero random, que se multiplica por el rango de numeros que queremos, y se le suma el minimo. Math.floor redondea el numero hacia abajo.
 
             function mostrar(opcion, jugador) {
                 if (opcion == 1) {
@@ -17,14 +18,14 @@
                     alert(`${jugador} tijera ✂`)
                 } else {
                     alert(`${jugador} opcion no valida ❌`)
-                }
+                }//muestra la opcion elegida por el jugador
             }
-
-            let nombre = ''
+            //variables
+            let l = ''
             let mensajeGanaste = `${nombre} ganaste 🥳`
             let opcion_elejida = 0
             let opcion_aleatoria = 0
-            
+
             // 1. Preguntar el nombre
             nombre = prompt('¿Cual es tu nombre?')
             alert(`Hola ${nombre} Bienvenido al juego de piedra 🪨 papel 📄 o tijera ✂`)
