@@ -34,14 +34,15 @@
                 alert(`La computadora eligio tijera ✂`)
             }
             // 6. Mostrar resultado
+            let mensajeGanaste = `${nombre} ganaste 🥳`
             if (opcion_elejida == opcion_aleatoria) {
                 alert(`Empate 🤝`)
             } else if (opcion_elejida == 1 && opcion_aleatoria == 3) {
-                alert(`${nombre} ganaste 🥳`)
+                alert(mensajeGanaste)
             } else if (opcion_elejida == 2 && opcion_aleatoria == 1) {
-                alert(`${nombre} ganaste 🥳`)
+                alert(mensajeGanaste)
             } else if (opcion_elejida == 3 && opcion_aleatoria == 2) {
-                alert(`${nombre} ganaste 🥳`)
+                alert(mensajeGanaste)
             } else {
                 alert(`${nombre} perdiste 😢`)
             }
