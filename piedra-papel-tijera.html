@@ -3,6 +3,10 @@
     <head>
         <title>Piedra, papel o tijera ✂</title>
         <script>
+            // 0. funciones
+            function aleatorio(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min // genera un numero aleatorio entre min y max. Genera un numero random, que se multiplica por el rango de numeros que queremos, y se le suma el minimo. Math.floor redondea el numero hacia abajo.
+            }
             // 1. Preguntar el nombre
             let nombre = ''
             nombre = prompt('¿Cual es tu nombre?')
@@ -20,7 +24,7 @@
                 alert(`${nombre} no elegiste una opcion valida ❌`)
             }
             // 4. Generar opcion aleatoria
-            let opcion_aleatoria = Math.floor(Math.random() * 3) + 1 // 1, 2, 3, funciona por que el numero aleatorio es entre 0 y 1, y al multiplicarlo por 3, da un numero entre 0 y 3, pero al sumarle 1, da un numero entre 1 y 4, pero como es un numero decimal, se redondea hacia abajo, dando un numero entre 1 y 3. La formula es: Math.floor(Math.random() * (max - min + 1)) + min
+            let opcion_aleatoria = aleatorio(1, 3)
             // 5. Mostrar opcion aleatoria
             if (opcion_aleatoria == 1) {
                 alert(`La computadora eligio piedra 🪨`)
