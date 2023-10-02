@@ -4,11 +4,17 @@
         <title>Piedra, papel o tijera ✂</title>
         <script>
             // 0. funciones y variables
+            //variables
+            let nombre = ''
+            let opcion_elejida = 0
+            let opcion_aleatoria = 0
+            let vecesGanaste = 0
+            let vecesPerdiste = 0
+            
             //funciones
             function aleatorio(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min 
             }// genera un numero aleatorio entre min y max. Genera un numero random, que se multiplica por el rango de numeros que queremos, y se le suma el minimo. Math.floor redondea el numero hacia abajo.
-
             function mostrar(opcion, jugador) {
                 if (opcion == 1) {
                     alert(`${jugador} piedra 🪨`)
@@ -18,13 +24,32 @@
                     alert(`${jugador} tijera ✂`)
                 } else {
                     alert(`${jugador} opcion no valida ❌`)
-                }//muestra la opcion elegida por el jugador
-            }
-            //variables
-            let l = ''
-            let mensajeGanaste = `${nombre} ganaste 🥳`
-            let opcion_elejida = 0
-            let opcion_aleatoria = 0
+                }
+            }//muestra la opcion elegida por el jugador y la opcion aleatoria
+            function ganaste() {
+                alert(`${nombre} ganaste 🥳`)
+                vecesGanaste = vecesGanaste + 1
+            }//muestra el mensaje de ganaste y suma 1 a la variable ganaste
+            function perdiste() {
+                alert(`${nombre} perdiste 😢`)
+                vecesPerdiste = vecesPerdiste + 1
+            }//muestra el mensaje de perdiste y suma 1 a la variable perdiste
+            function empate() {
+                alert(`${nombre} empate 🤝`)
+            }//muestra el mensaje de empatamos
+            function resultado(){
+                if (opcion_elejida == opcion_aleatoria) {
+                empate()
+                } else if (opcion_elejida == 1 && opcion_aleatoria == 3) {
+                ganaste()
+                } else if (opcion_elejida == 2 && opcion_aleatoria == 1) {
+                ganaste()
+                } else if (opcion_elejida == 3 && opcion_aleatoria == 2) {
+                ganaste()
+                } else {
+                perdiste()
+                }
+            }//muestra el resultado del juego
 
             // 1. Preguntar el nombre
             nombre = prompt('¿Cual es tu nombre?')
@@ -43,17 +68,7 @@
             mostrar(opcion_aleatoria, 'Computadora')
 
             // 6. Mostrar resultado
-            if (opcion_elejida == opcion_aleatoria) {
-                alert(`Empate 🤝`)
-            } else if (opcion_elejida == 1 && opcion_aleatoria == 3) {
-                alert(mensajeGanaste)
-            } else if (opcion_elejida == 2 && opcion_aleatoria == 1) {
-                alert(mensajeGanaste)
-            } else if (opcion_elejida == 3 && opcion_aleatoria == 2) {
-                alert(mensajeGanaste)
-            } else {
-                alert(`${nombre} perdiste 😢`)
-            }
+            resultado()
         </script>
         <body>
             <h1>Piedra 🪨 papel 📄 o tijera ✂</h1>
